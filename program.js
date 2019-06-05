@@ -3,19 +3,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-
-var mymodule = require('./mymodule');
-
-let all_custom_args = process.argv.slice(2);
-let dir = all_custom_args.shift();
-let extension = all_custom_args.shift();
-var callback = function (err, list) {
-    if (err) throw err;
-    list.forEach(function (file) {
-        console.log(file);
-    })
-};
-mymodule(dir, extension, callback);
+const http = require('http');
 
 // App
 /*
