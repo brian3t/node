@@ -11,6 +11,8 @@
   "author": "ngxtri@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "bl": "^3.0.0",
+    "express": "^4.17.1",
+    "through2-map": "^3.0.0"
   }
 }

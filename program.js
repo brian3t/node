@@ -1,24 +1,41 @@
 'use strict';
 
-const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
+const bl = require('bl')
+const map = require('through2-map')
+const url = require('url')
 
-let all_custom_args = process.argv.slice(2);
-let url = all_custom_args.shift();
+const net = require('net')
+let port_num = process.argv[2]
 
-let httpget = http.get(url, (res) => {
-    let all_data = [];
-    res.setEncoding('utf8');
-    res.on('data', (data) => {
-        all_data.push(data);
-    });
-    res.on('error', (data) => {
-        console.log(`Error now`);
-        console.log(data);
-    });
-    res.on('end', (data) => {
-        console.log(all_data.join('\n'));
-    });
-});
+function zero_fill(input) {
+    return String(input).padStart(2, '0')
+}
+
+
+let server = http.createServer(
+    (req, res) => {
+        if (req.method !== 'GET'){
+            return res.end('oh no GET only')
+        }
+        res.writeHead(200, { 'Content-Type': 'application/json' })
+
+        if (req.url.slice(0,4) !== '/api'){
+            return res.end('We need /api')
+        }
+        let url_parts = url.parse(req.url, true).query
+
+
+        req.pipe(map(
+            (chunk) => {
+                return chunk.toString().toUpperCase()
+            }
+        )).pipe(res)
+
+        return res
+    })
+
+server.listen(port_num)
+// server.listen(8000)

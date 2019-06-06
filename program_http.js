@@ -4,21 +4,25 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
+const BL = require('bl');
 
 let all_custom_args = process.argv.slice(2);
-let url = all_custom_args.shift();
+let urls = all_custom_args.slice(0, 3);
+let all_data = [];
 
-let httpget = http.get(url, (res) => {
-    let all_data = [];
-    res.setEncoding('utf8');
-    res.on('data', (data) => {
-        all_data.push(data);
+for (let url_index in urls) {
+    let httpget = http.get(urls[url_index], (res) => {
+        res.pipe(BL((err, data) => {
+            if (err) {
+                return;
+            }
+            data = data.toString()
+            all_data[url_index] = data
+            if (all_data.length === 3) {//when all done, print them all
+                console.log(all_data.join('\n'));
+            }
+        }))
     });
-    res.on('error', (data) => {
-        console.log(`Error now`);
-        console.log(data);
-    });
-    res.on('end', (data) => {
-        console.log(all_data.join('\n'));
-    });
-});
+}
+
+let a = 1;
