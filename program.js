@@ -1,10 +1,10 @@
 'use strict';
 
-function getShortMessages(message_objects) {
-    let messages_only = message_objects.map(message => message.message)
-    return messages_only.filter(message => message.split('').length < 50)
+function repeat(operation, num) {
+    // modify this so it can be interrupted
+    if (num <= 0) return
+    operation()
+    return repeat(operation, --num)
 }
 
-
-// Do not remove the line below
-module.exports = getShortMessages
+module.exports = repeat
