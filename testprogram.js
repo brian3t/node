@@ -1,11 +1,12 @@
 'use strict';
 
-let program = require('./program')
+const reduce = require('./recursion')
+// Your reduce function should behave the same as a
+// regular Array#reduce, but it will take the array
+// to operate on as the first argument:
 
-let input = [
-    {name: 'a', message: 'Tempor quis esse consequat sunt ea eiusmod.'},
-    {type: 'b', message: 'Id culpa ad proident ad nulla laborum incididunt.'},
-    {count: 4, message: 'Ullamco in ea et ad anim anim ullamco est.'},
-    {is_active: true, message: 'Est ut irure irure nisi.'}]
+console.log(reduce([1,2,3], function(prev, curr, index, arr) {
+    return prev + curr
+}, 0))
+// => 6
 
-console.log(program(input))
