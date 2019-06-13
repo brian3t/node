@@ -1,12 +1,19 @@
 'use strict';
 
-const repeat = require('./program')
+const slice = require('./program')
 
 
-repeat(() => {
-    console.log(`Im happy`);
-}, 2000) // 3
+var nums = [1,2,3,4,5]
 
-setTimeout(() => {
-    console.log(`timeout exceeded. repeat should stop now`);
-}, 100)
+// your slice function should match the regular
+// behaviour of slice, except it takes the array
+// as the first argument
+nums = "ohlala"
+
+console.log(slice(nums))
+console.log(slice(nums, 0, 2)) // [1, 2]
+console.log(slice(nums, 1, 2)) // [2]
+
+// regular slice usage for comparison
+nums.slice(0, 2) // [1, 2]
+nums.slice(1, 2) // [2]
