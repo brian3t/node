@@ -1,10 +1,15 @@
-'use strict';
-
-function repeat(operation, num) {
-    // modify this so it can be interrupted
-    if (num <= 0) return
-    operation()
-    return repeat(operation, --num)
+function loadUsers(userIds, load, done) {
+    var users = []
+    /*for (var i = 0; i < userIds.length; i++) {
+        users.push(load(userIds[i]))
+    }*/
+    userIds.forEach((userId, index, arr) => {
+        load(userId, (result) => {
+            here result is user or null
+        })
+    })
+    return users
 }
 
-module.exports = repeat
+module.exports = loadUsers
+
