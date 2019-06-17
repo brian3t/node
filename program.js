@@ -1,13 +1,19 @@
-// Explained:
-// The value of `this` in Function.call is the function
-// that will be executed.
-//
-// Bind returns a new function with the value of `this` fixed
-// to whatever was passed as its first argument.
-//
-// Every function 'inherits' from Function.prototype,
-// thus every function, including call, apply and bind 
-// have the methods call apply and bind.
-//
-// Function.prototype.call === Function.call
-module.exports = Function.call.bind(Array.prototype.slice)
+// include the Lo-Dash library
+const _ = require("lodash");
+
+const worker = function (users) {
+    return _.forEach(users, (value, index, collection) => {
+        let size = '', population = value.population;
+        if (population > 1) {
+            size = 'big'
+        } else if (population > 0.5) {
+            size = 'med'
+        } else {
+            size = 'small'
+        }
+        value.size = size
+    })
+};
+
+// export the worker function as a nodejs module
+module.exports = worker;
