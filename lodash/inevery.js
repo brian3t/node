@@ -3,7 +3,7 @@ const _ = require('lodash')
 
 function worker(cities) {
     let cities_sorted = {}
-    _.forEach(cities, (city_detail, city_name, cities) => {
+    _.foreach(cities, (city_detail, city_name, cities) => {
         let pop = city_detail.population
         let pop_size = ''
         if (pop > 1) pop_size = 'big'
@@ -15,10 +15,10 @@ function worker(cities) {
 }
 
 let cities = {
-    Hamburg: {population: 1.698},
-    Strasbourg: {population: 0.272},
-    Rome: {population: 2.753},
-    Dublin: {population: 0.528}
+    hamburg: {population: 1.698},
+    strasbourg: {population: 0.272},
+    rome: {population: 2.753},
+    dublin: {population: 0.528}
 }
 
 
