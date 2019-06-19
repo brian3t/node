@@ -13,11 +13,14 @@
   "dependencies": {
     "bl": "^3.0.0",
     "bug-clinic": "^1.1.6",
+    "bunyan": "^1.8.12",
     "express": "^4.17.1",
     "functional-javascript-workshop": "^1.0.6",
     "js-best-practices": "^1.1.4",
     "lololodash": "^0.9.0",
     "mysql": "^2.17.1",
+    "stackup": "^1.0.2",
+    "tap": "^14.2.4",
     "through2-map": "^3.0.0"
   }
 }
