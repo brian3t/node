@@ -1,16 +1,35 @@
 "use strict";
 const servername = 'relay.usvsolutions.com'
 const http = require('http')
-const zlib = require('zlib');
+const zlib = require('zlib')
+const querystring = require('querystring')
 const _ = require('lodash')
 
 const TARGET_OPTIONS = {
     hostname: 'evs.techship.io',
     protocol: 'http:'
 }
+const get_labelary = require('./get_labelary')
+
+/**
+ *
+ * @param req the server's request
+ * @param res the server's response
+ */
+const call_get_labelary = function (req, res) {
+    let last_query_param = req.url.split('/').pop()
+    let raw_zpl = decodeURI(last_query_param)
+    get_labelary(raw_zpl, (data) => {
+        return res.end(data)
+    })
+}
 
 const server = http.createServer((req, res) => {
+    if (req.url === '/favicon.ico') return false
     console.log(`request is:` + req.url);
+    if (req.url.startsWith('/get_labelary')) {
+        return call_get_labelary(req, res)
+    }
     res.setHeader('Access-Control-Allow-Origin', '*')
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, ' + req.headers['access-control-request-headers']) //allow whatever header the client is sending
     if (req.method === 'OPTIONS') {
@@ -57,8 +76,8 @@ const server = http.createServer((req, res) => {
             res.setHeader("content-type", 'application/json; charset=UTF-8')//not zipping
             // console.log(`data here: ${data}`);
             res.setHeader('content-length', collected_data.length)
-            res.write(collected_data, (err)=>{
-                if (err){
+            res.write(collected_data, (err) => {
+                if (err) {
                     console.error(`Error: ${err.message}`);
                 }
                 return res.end()
