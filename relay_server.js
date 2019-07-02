@@ -17,14 +17,16 @@ const get_labelary = require('./get_labelary')
  * @param res the server's response
  */
 const call_get_labelary = function (req, res) {
-    let last_query_param = req.url.split('/').pop()
+    let uri_params = req.url.split('/')
+    let last_query_param = uri_params[2]//filename, `filename`, then encoded_zpl
+    let file_type = uri_params[4]
     let raw_zpl = decodeURI(last_query_param)
     let buff = new Buffer(raw_zpl, 'base64');
     let raw_zpl_decoded = buff.toString('ascii');
     console.log(`zpl decoded: ${raw_zpl_decoded}`)
     get_labelary(raw_zpl_decoded, (data) => {
         return res.end(data)
-    })
+    }, file_type)
 }
 
 const server = http.createServer((req, res) => {

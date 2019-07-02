@@ -30,8 +30,9 @@ const grab_labelary = function (rawzpl, cb, expect_datatype = 'png') {
             if (err) throw err
             console.log(`Saved debugging file. To view: xnview label_fr_labelary.png`)
         })
-        let body_in_base64 = Buffer.from(body).toString('base64')
-        return cb(body_in_base64)
+        // let body_in_base64 = Buffer.from(body).toString('base64')
+        // return cb(body_in_base64)
+        return cb(body)
     });
 }
 module.exports = grab_labelary
