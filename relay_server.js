@@ -25,17 +25,18 @@ const call_get_labelary = function (req, res) {
 }
 
 const server = http.createServer((req, res) => {
-    if (req.url === '/favicon.ico') return false
-    console.log(`request is:` + req.url);
-    if (req.url.startsWith('/get_labelary')) {
-        return call_get_labelary(req, res)
-    }
     res.setHeader('Access-Control-Allow-Origin', '*')
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, ' + req.headers['access-control-request-headers']) //allow whatever header the client is sending
     if (req.method === 'OPTIONS') {
         res.statusCode = 200
         return res.end()
     }
+    if (req.url === '/favicon.ico') return false
+    console.log(`request is:` + req.url);
+    if (req.url.startsWith('/get_labelary')) {
+        return call_get_labelary(req, res)
+    }
+
     let modified_headers = req.headers
     modified_headers.accept = '*/*'
     modified_headers["cache-control"] = 'no-cache'
