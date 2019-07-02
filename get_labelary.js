@@ -1,10 +1,14 @@
 const request = require('request');
+const fs = require('fs')
 
 // var zpl = "^xa^cfa,50^fo100,100^fdHello World^fs^xz";
 
 var options = {
     encoding: null,
-    url: 'http://api.labelary.com/v1/printers/8dpmm/labels/4x6/0/' // adjust print density (8dpmm), label width (4 inches), label height (6 inches), and label index (0) as necessary
+    url: 'http://api.labelary.com/v1/printers/8dpmm/labels/4x6/0/', // adjust print density (8dpmm), label width (4 inches), label height (6 inches), and label index (0) as necessary
+    headers:{
+        'Content-Type': 'image/png'
+    }
 };
 
 /**
@@ -22,7 +26,12 @@ const grab_labelary = function (rawzpl, cb, expect_datatype = 'png') {
         if (err) {
             return false;
         }
-        return cb(body)
+        fs.writeFile('label_fr_labelary.png', body, (err)=>{
+            if (err) throw err
+            console.log(`Saved debugging file. To view: xnview label_fr_labelary.png`)
+        })
+        let body_in_base64 = Buffer.from(body).toString('base64')
+        return cb(body_in_base64)
     });
 }
 module.exports = grab_labelary

@@ -19,7 +19,10 @@ const get_labelary = require('./get_labelary')
 const call_get_labelary = function (req, res) {
     let last_query_param = req.url.split('/').pop()
     let raw_zpl = decodeURI(last_query_param)
-    get_labelary(raw_zpl, (data) => {
+    let buff = new Buffer(raw_zpl, 'base64');
+    let raw_zpl_decoded = buff.toString('ascii');
+    console.log(`zpl decoded: ${raw_zpl_decoded}`)
+    get_labelary(raw_zpl_decoded, (data) => {
         return res.end(data)
     })
 }
@@ -32,7 +35,7 @@ const server = http.createServer((req, res) => {
         return res.end()
     }
     if (req.url === '/favicon.ico') return false
-    console.log(`request is:` + req.url);
+    console.log(`request is:` + req.url.slice(0, 15));
     if (req.url.startsWith('/get_labelary')) {
         return call_get_labelary(req, res)
     }
