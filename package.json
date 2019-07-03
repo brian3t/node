@@ -25,6 +25,7 @@
     "request": "^2.88.0",
     "stackup": "^1.0.2",
     "tap": "^14.2.4",
-    "through2-map": "^3.0.0"
+    "through2-map": "^3.0.0",
+    "unirest": "^0.6.0"
   }
 }
