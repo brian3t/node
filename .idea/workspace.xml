@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="936fc65a-8bdc-43b9-b189-f9649bbd7fdc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app_mysql.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
@@ -126,7 +125,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="debugger.dataViews.javascript" />
+    <property name="settings.editor.selected.configurable" value="liveEdit" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -167,10 +166,19 @@
     <configuration name="node remote" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="9229" restartOnDisconnect="true">
       <method v="2" />
     </configuration>
+    <configuration name="app.js JavaScript" type="JavascriptDebugType" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://nodelocal/url">
+      <method v="2" />
+    </configuration>
+    <configuration name="app.js (1) JavaScript" type="JavascriptDebugType" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:8081/url2">
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="NodeJSConfigurationType" node-parameters="app.js">
       <method v="2" />
     </configuration>
     <configuration name="app.js" type="NodeJSConfigurationType" node-parameters="app.js" working-dir="$PROJECT_DIR$">
+      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+        <browser name="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" start="true" with-js-debugger="true" url="http://nodelocal/url" />
+      </EXTENSION>
       <method v="2" />
     </configuration>
     <configuration name="get_labelary_test.js" type="NodeJSConfigurationType" path-to-js-file="get_labelary_test.js" working-dir="$PROJECT_DIR$">
@@ -201,6 +209,8 @@
     <list>
       <item itemvalue="Attach to Node.js/Chrome.node remote" />
       <item itemvalue="Bash.learnyounode" />
+      <item itemvalue="JavaScript Debug.app.js (1) JavaScript" />
+      <item itemvalue="JavaScript Debug.app.js JavaScript" />
       <item itemvalue="Node.js.app.js" />
       <item itemvalue="Node.js.relay server" />
       <item itemvalue="Node.js.get_labelary_test.js" />
@@ -376,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562101901631</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="11/06 page 36 npm publish">
+      <created>1573058383110</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1573058383110</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,8 +447,21 @@
     <MESSAGE value="relay server done" />
     <MESSAGE value="relay server making a request to labelary" />
     <MESSAGE value="allow to download png and pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="allow to download png and pdf" />
+    <MESSAGE value="11/06 page 36 npm publish" />
+    <option name="LAST_COMMIT_MESSAGE" value="11/06 page 36 npm publish" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app.js</url>
+          <line>4</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
