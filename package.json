@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "bl": "^3.0.0",
+    "brian_npmutil": "git+https://github.com/brian3t/npmutil.git",
     "bug-clinic": "^1.1.6",
     "bunyan": "^1.8.12",
     "express": "^4.17.1",
