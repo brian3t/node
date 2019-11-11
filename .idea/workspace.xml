@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="936fc65a-8bdc-43b9-b189-f9649bbd7fdc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/greet.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +121,7 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="10.16.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.17.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -176,10 +175,16 @@
     <configuration name="node remote" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="9229" restartOnDisconnect="true">
       <method v="2" />
     </configuration>
+    <configuration name="app.js JavaScript" type="JavascriptDebugType" uri="http://nodelocal">
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="NodeJSConfigurationType" node-parameters="app.js">
       <method v="2" />
     </configuration>
     <configuration name="app.js" type="NodeJSConfigurationType" node-parameters="app.js" working-dir="$PROJECT_DIR$">
+      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+        <browser start="true" with-js-debugger="true" url="http://nodelocal" />
+      </EXTENSION>
       <method v="2" />
     </configuration>
     <configuration name="get_labelary_test.js" type="NodeJSConfigurationType" path-to-js-file="get_labelary_test.js" working-dir="$PROJECT_DIR$">
@@ -209,7 +214,6 @@
     </configuration>
     <list>
       <item itemvalue="Attach to Node.js/Chrome.node remote" />
-      <item itemvalue="Bash.learnyounode" />
       <item itemvalue="Node.js.app.js" />
       <item itemvalue="Node.js.get_labelary_test.js" />
       <item itemvalue="Node.js.node single file" />
@@ -217,6 +221,7 @@
       <item itemvalue="Node.js.relay server" />
       <item itemvalue="Node.js.test_cr8_ship.js" />
       <item itemvalue="npm.brian" />
+      <item itemvalue="JavaScript Debug.app.js JavaScript" />
     </list>
     <recent_temporary>
       <list>
