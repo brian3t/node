@@ -1,22 +1,36 @@
 const express = require('express')
+const ejs = require('ejs')
 const greet_middleware = require('./greet')
+const other = require('./other')
 const app = express()
 const favicon = require('serve-favicon')
 const path = require('path')
 
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
-app.use('/greet', greet_middleware({greeting_verb:'aloha'}))
-
-app.get('/url2', (req, res, next)=>{
-    return res.end('hiyabcded')
+app.set('view engine', 'ejs')
+// app.set('view', 'src/views')
+app.use('/user', (req, res, next)=>{
+    res.render('user', {supplies: ['cake', 'cookie', 'detox', 'beef'], title: 'user title here'})
 })
 
-app.get('/', (req, res, next)=>{
+class GreetingService {
+    constructor(greeting = 'Hello'){
+        this.greeting = greeting
+    }
+
+    createGreeting(name){
+        return `${this.greeting}, ${name}!`
+    }
+}
+
+app.use('/greeten', greet_middleware({service: new GreetingService('hello')}))
+app.use('/greetit', greet_middleware({service: new GreetingService('ciao')}))
+
+app.get('/', (req, res, next) => {
     return res.end('root here')
 })
-app.get('/other', other.doSomething)
 
-app.listen(3000,'nodelocal')
+app.listen(3000, 'nodelocal')
 
 
 function myFunction(){
