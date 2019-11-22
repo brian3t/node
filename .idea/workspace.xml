@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="936fc65a-8bdc-43b9-b189-f9649bbd7fdc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/other.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/user.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goto_folder.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/greet.js" beforeDir="false" afterPath="$PROJECT_DIR$/greet.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -41,27 +40,18 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="local8_lno" type="feb32156:DbDataSourceImpl" />
-        <item name="lno: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="mobe3repo mcc" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="local8_lno" type="feb32156:DbDataSourceImpl" />
-        <item name="lno: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="mobe3repo mcc" type="feb32156:DbDataSourceImpl" />
+        <item name="mccall891Repo: database" type="ccb7ac2a:MsImplModel$Database" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="local8_lno" type="feb32156:DbDataSourceImpl" />
-        <item name="lno: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="local8_lno" type="feb32156:DbDataSourceImpl" />
-        <item name="lno: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="routines" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="mobe3repo mcc" type="feb32156:DbDataSourceImpl" />
+        <item name="mccall891Repo: database" type="ccb7ac2a:MsImplModel$Database" />
+        <item name="mccall891test: schema" type="2865ee2e:MsImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -126,7 +116,7 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="10.17.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.16.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/package.json" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -139,19 +129,19 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.EJS" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/modular" />
       <recent name="$PROJECT_DIR$/generator" />
       <recent name="$PROJECT_DIR$/bugclinic" />
       <recent name="$PROJECT_DIR$/lodash" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -166,7 +156,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.app.js">
+  <component name="RunManager" selected="Node.js.app.js window">
     <configuration name="learnyounode" type="BashConfigurationType" factoryName="Bash">
       <module name="node" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -184,7 +174,16 @@
     <configuration name="app.js JavaScript" type="JavascriptDebugType" uri="http://nodelocal/greet">
       <method v="2" />
     </configuration>
+    <configuration name="app.js window JavaScript" type="JavascriptDebugType" uri="http://nodelocal/json">
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="NodeJSConfigurationType" node-parameters="app.js">
+      <method v="2" />
+    </configuration>
+    <configuration name="app.js window" type="NodeJSConfigurationType" node-parameters="app.js" working-dir="$PROJECT_DIR$">
+      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+        <browser name="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" start="true" with-js-debugger="true" url="http://nodelocal/json" />
+      </EXTENSION>
       <method v="2" />
     </configuration>
     <configuration name="app.js" type="NodeJSConfigurationType" node-parameters="app.js" working-dir="$PROJECT_DIR$">
@@ -220,8 +219,11 @@
     </configuration>
     <list>
       <item itemvalue="Attach to Node.js/Chrome.node remote" />
+      <item itemvalue="Bash.learnyounode" />
       <item itemvalue="JavaScript Debug.app.js JavaScript" />
+      <item itemvalue="JavaScript Debug.app.js window JavaScript" />
       <item itemvalue="Node.js.app.js" />
+      <item itemvalue="Node.js.app.js window" />
       <item itemvalue="Node.js.get_labelary_test.js" />
       <item itemvalue="Node.js.node single file" />
       <item itemvalue="Node.js.program.js with args" />
@@ -255,6 +257,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559594666052</updated>
+      <workItem from="1574398570520" duration="258000" />
+      <workItem from="1574398851065" duration="614000" />
+      <workItem from="1574399487925" duration="1110000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1559594773401</created>
@@ -463,18 +468,6 @@
     <MESSAGE value="page 43 greet middleware" />
     <option name="LAST_COMMIT_MESSAGE" value="page 43 greet middleware" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app.js</url>
-          <line>17</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
