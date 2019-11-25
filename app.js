@@ -44,11 +44,20 @@ class GreetingService {
 app.use('/greeten', greet_middleware({service: new GreetingService('hello')}))
 app.use('/greetit', greet_middleware({service: new GreetingService('ciao')}))
 
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+//pass error to the next matching route.
+    next(err);
+});
+
 app.get('/', (req, res, next) => {
     return res.end('root here')
 })
 
-app.listen(80, 'nodelocal')
+app.listen(3000, 'nodelocal')
+// app.listen(80, 'nodelocal')
 
 
 function myFunction(){
