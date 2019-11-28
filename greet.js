@@ -6,6 +6,11 @@ module.exports = function (options = {}){ //Router factory
     //get controller
     const {service} = options
     router.get('/', (req,res,next)=>{
+        if (!res.query || !res.query.name){
+            return res.render('error', {
+                message: 'query named name missing'
+            })
+        }
         res.end(service.createGreeting(req.query.name || 'Stranger'))
     })
 
