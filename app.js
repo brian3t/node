@@ -4,10 +4,25 @@ var app = express()
 const path = require('path')
 const fs = require('fs')
 
-app.use((req,res,next)=>{
-    fs.readFile(path.resolve(__dirname, 'views/user.ejs'), (err, binaryContent)=>{
-        res.end(`string sent was this hex string ` + binaryContent.toString('hex'))
-    })
+const ev = EventEmitter
+
+class Dog extends ev {
+}
+
+class Food {
+}
+
+let my_dog = new Dog()
+
+my_dog.on('chew', (item)=>{
+    if (item instanceof Food){
+        console.log(`good dog eating food`)
+    } else {
+        console.log(`time to buy another ${item} Bad dog`)
+    }
 })
 
-app.listen(3000)
+my_dog.emit('chew','shoe')
+
+const bacon=new Food()
+my_dog.emit('chew',bacon)

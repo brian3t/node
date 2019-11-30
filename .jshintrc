@@ -1,4 +1,7 @@
 {
   "node": true,
-  "undef": true
+  "undef": true,
+  "lastsemic": true,
+  "asi": true,
+  "esversion": 6
 }
