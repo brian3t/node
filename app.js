@@ -1,10 +1,15 @@
 const express = require('express')
 const bodyparser = require('body-parser')
+const env = require('./environment')
+const propreader = require('properties-reader')
+const properties = new propreader(env)
+const port = properties.get('main.app.port')
+console.log(`port: ${port}`)
+return 999
 var app = express()
 const path = require('path')
 const fs = require('fs')
-
-const ev = EventEmitter
+const ev=require('events').EventEmitter
 
 class Dog extends ev {
 }
