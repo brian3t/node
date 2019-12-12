@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="936fc65a-8bdc-43b9-b189-f9649bbd7fdc" name="Default Changelist" comment="page 88 bluebird promisify">
-      <change afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
+    <list default="true" id="936fc65a-8bdc-43b9-b189-f9649bbd7fdc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.jshintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.jshintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,18 +39,18 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mobe3repo mcc" type="feb32156:DbDataSourceImpl" />
+        <item name="mongo@local" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mobe3repo mcc" type="feb32156:DbDataSourceImpl" />
-        <item name="mccall891Repo: database" type="ccb7ac2a:MsImplModel$Database" />
+        <item name="mongo@local" type="feb32156:DbDataSourceImpl" />
+        <item name="bn: schema" type="f0f64354:MongoImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mobe3repo mcc" type="feb32156:DbDataSourceImpl" />
-        <item name="mccall891Repo: database" type="ccb7ac2a:MsImplModel$Database" />
-        <item name="mccall891test: schema" type="2865ee2e:MsImplModel$Schema" />
+        <item name="mongo@local" type="feb32156:DbDataSourceImpl" />
+        <item name="bn: schema" type="f0f64354:MongoImplModel$Schema" />
+        <item name="myCol1: table" type="531e99d1:MongoImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -94,6 +94,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mongo" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -115,7 +116,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -239,7 +240,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.test.js">
+  <component name="RunManager" selected="Node.js.app.js">
     <configuration name="learnyounode" type="BashConfigurationType" factoryName="Bash">
       <module name="node" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -274,7 +275,7 @@
     </configuration>
     <configuration name="app.js" type="NodeJSConfigurationType" node-parameters="app.js" working-dir="$PROJECT_DIR$">
       <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
-        <browser name="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" start="true" with-js-debugger="true" url="http://nodelocal/settings" />
+        <browser name="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" with-js-debugger="true" url="http://nodelocal/settings" />
       </EXTENSION>
       <method v="2" />
     </configuration>
@@ -334,7 +335,27 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:mongo@local" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:mongo@local" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@61c43c72" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:mongo@local" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@41aced46" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:mongo@local" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@77b7a15c" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -517,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575351789541</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="page 89 14.2 manual promisify">
+      <created>1575617280606</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1575617280606</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,7 +605,8 @@
     <MESSAGE value="page 43 greet middleware" />
     <MESSAGE value="page 47 error handling" />
     <MESSAGE value="page 88 bluebird promisify" />
-    <option name="LAST_COMMIT_MESSAGE" value="page 88 bluebird promisify" />
+    <MESSAGE value="page 89 14.2 manual promisify" />
+    <option name="LAST_COMMIT_MESSAGE" value="page 89 14.2 manual promisify" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -589,98 +618,118 @@
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
     <state x="555" y="192" width="808" height="685" key="#ESLint/0.0.1920.1059@0.0.1920.1059" timestamp="1575138482928" />
-    <state x="555" y="192" width="808" height="685" key="#Plugins" timestamp="1575265913950">
+    <state x="555" y="192" width="808" height="685" key="#Plugins" timestamp="1576124753250">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state x="555" y="192" width="808" height="685" key="#Plugins/0.0.1920.1059@0.0.1920.1059" timestamp="1575265913950" />
-    <state x="418" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575519942591">
+    <state x="555" y="192" width="808" height="685" key="#Plugins/0.0.1920.1059@0.0.1920.1059" timestamp="1576124753250" />
+    <state x="418" y="187" width="808" height="685" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575767356720">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state x="418" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1059@0.0.1920.1059" timestamp="1575519942591" />
-    <state x="643" y="260" width="632" height="549" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575085879994">
+    <state x="418" y="187" width="808" height="685" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1059@0.0.1920.1059" timestamp="1575767356720" />
+    <state x="643" y="260" width="632" height="549" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575748183414">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state x="643" y="260" width="632" height="549" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1059@0.0.1920.1059" timestamp="1575085879994" />
-    <state x="532" y="128" width="854" height="813" key="CommitChangelistDialog2" timestamp="1575597837882">
+    <state x="643" y="260" width="632" height="549" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1059@0.0.1920.1059" timestamp="1575748183414" />
+    <state x="532" y="128" width="854" height="813" key="CommitChangelistDialog2" timestamp="1576124877830">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state x="532" y="128" width="854" height="813" key="CommitChangelistDialog2/0.0.1920.1059@0.0.1920.1059" timestamp="1575597837882" />
-    <state width="1878" height="278" key="GridCell.Tab.0.bottom" timestamp="1575614968437">
+    <state x="532" y="128" width="854" height="813" key="CommitChangelistDialog2/0.0.1920.1059@0.0.1920.1059" timestamp="1576124877830" />
+    <state x="743" y="288" width="432" height="492" key="FileChooserDialogImpl" timestamp="1576124798862">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1059@0.0.1920.1059" timestamp="1575614968437" />
-    <state width="1878" height="278" key="GridCell.Tab.0.center" timestamp="1575614968437">
+    <state x="743" y="288" width="432" height="492" key="FileChooserDialogImpl/0.0.1920.1059@0.0.1920.1059" timestamp="1576124798862" />
+    <state width="1878" height="278" key="GridCell.Tab.0.bottom" timestamp="1575943468880">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="278" key="GridCell.Tab.0.center/0.0.1920.1059@0.0.1920.1059" timestamp="1575614968437" />
-    <state width="1878" height="278" key="GridCell.Tab.0.left" timestamp="1575614968437">
+    <state width="1878" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468880" />
+    <state width="1878" height="278" key="GridCell.Tab.0.center" timestamp="1575943468879">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="278" key="GridCell.Tab.0.left/0.0.1920.1059@0.0.1920.1059" timestamp="1575614968437" />
-    <state width="1878" height="278" key="GridCell.Tab.0.right" timestamp="1575614968437">
+    <state width="1878" height="278" key="GridCell.Tab.0.center/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468879" />
+    <state width="1878" height="278" key="GridCell.Tab.0.left" timestamp="1575943468878">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="278" key="GridCell.Tab.0.right/0.0.1920.1059@0.0.1920.1059" timestamp="1575614968437" />
-    <state width="1878" height="347" key="GridCell.Tab.1.bottom" timestamp="1575490885338">
+    <state width="1878" height="278" key="GridCell.Tab.0.left/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468878" />
+    <state width="1878" height="278" key="GridCell.Tab.0.right" timestamp="1575943468879">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1059@0.0.1920.1059" timestamp="1575490885338" />
-    <state width="1878" height="347" key="GridCell.Tab.1.center" timestamp="1575490885338">
+    <state width="1878" height="278" key="GridCell.Tab.0.right/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468879" />
+    <state width="1878" height="275" key="GridCell.Tab.1.bottom" timestamp="1575943468865">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="347" key="GridCell.Tab.1.center/0.0.1920.1059@0.0.1920.1059" timestamp="1575490885338" />
-    <state width="1878" height="347" key="GridCell.Tab.1.left" timestamp="1575490885338">
+    <state width="1878" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468865" />
+    <state width="1878" height="275" key="GridCell.Tab.1.center" timestamp="1575943468864">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="347" key="GridCell.Tab.1.left/0.0.1920.1059@0.0.1920.1059" timestamp="1575490885338" />
-    <state width="1878" height="347" key="GridCell.Tab.1.right" timestamp="1575490885338">
+    <state width="1878" height="275" key="GridCell.Tab.1.center/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468864" />
+    <state width="1878" height="275" key="GridCell.Tab.1.left" timestamp="1575943468864">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="347" key="GridCell.Tab.1.right/0.0.1920.1059@0.0.1920.1059" timestamp="1575490885338" />
-    <state width="1878" height="347" key="GridCell.Tab.2.bottom" timestamp="1575490885339">
+    <state width="1878" height="275" key="GridCell.Tab.1.left/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468864" />
+    <state width="1878" height="275" key="GridCell.Tab.1.right" timestamp="1575943468865">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="347" key="GridCell.Tab.2.bottom/0.0.1920.1059@0.0.1920.1059" timestamp="1575490885339" />
-    <state width="1878" height="347" key="GridCell.Tab.2.center" timestamp="1575490885339">
+    <state width="1878" height="275" key="GridCell.Tab.1.right/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468865" />
+    <state width="1878" height="275" key="GridCell.Tab.2.bottom" timestamp="1575943468866">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="347" key="GridCell.Tab.2.center/0.0.1920.1059@0.0.1920.1059" timestamp="1575490885339" />
-    <state width="1878" height="347" key="GridCell.Tab.2.left" timestamp="1575490885338">
+    <state width="1878" height="275" key="GridCell.Tab.2.bottom/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468866" />
+    <state width="1878" height="275" key="GridCell.Tab.2.center" timestamp="1575943468866">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="347" key="GridCell.Tab.2.left/0.0.1920.1059@0.0.1920.1059" timestamp="1575490885338" />
-    <state width="1878" height="347" key="GridCell.Tab.2.right" timestamp="1575490885339">
+    <state width="1878" height="275" key="GridCell.Tab.2.center/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468866" />
+    <state width="1878" height="275" key="GridCell.Tab.2.left" timestamp="1575943468865">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="347" key="GridCell.Tab.2.right/0.0.1920.1059@0.0.1920.1059" timestamp="1575490885339" />
-    <state width="1878" height="371" key="GridCell.Tab.3.bottom" timestamp="1575490885294">
+    <state width="1878" height="275" key="GridCell.Tab.2.left/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468865" />
+    <state width="1878" height="275" key="GridCell.Tab.2.right" timestamp="1575943468866">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="371" key="GridCell.Tab.3.bottom/0.0.1920.1059@0.0.1920.1059" timestamp="1575490885294" />
-    <state width="1878" height="371" key="GridCell.Tab.3.center" timestamp="1575490885293">
+    <state width="1878" height="275" key="GridCell.Tab.2.right/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468866" />
+    <state width="1878" height="275" key="GridCell.Tab.3.bottom" timestamp="1575943468867">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="371" key="GridCell.Tab.3.center/0.0.1920.1059@0.0.1920.1059" timestamp="1575490885293" />
-    <state width="1878" height="371" key="GridCell.Tab.3.left" timestamp="1575490885293">
+    <state width="1878" height="275" key="GridCell.Tab.3.bottom/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468867" />
+    <state width="1878" height="275" key="GridCell.Tab.3.center" timestamp="1575943468867">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="371" key="GridCell.Tab.3.left/0.0.1920.1059@0.0.1920.1059" timestamp="1575490885293" />
-    <state width="1878" height="371" key="GridCell.Tab.3.right" timestamp="1575490885293">
+    <state width="1878" height="275" key="GridCell.Tab.3.center/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468867" />
+    <state width="1878" height="275" key="GridCell.Tab.3.left" timestamp="1575943468867">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state width="1878" height="371" key="GridCell.Tab.3.right/0.0.1920.1059@0.0.1920.1059" timestamp="1575490885293" />
-    <state x="554" y="201" width="1022" height="738" key="SettingsEditor" timestamp="1575519859203">
+    <state width="1878" height="275" key="GridCell.Tab.3.left/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468867" />
+    <state width="1878" height="275" key="GridCell.Tab.3.right" timestamp="1575943468867">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state x="554" y="201" width="1022" height="738" key="SettingsEditor/0.0.1920.1059@0.0.1920.1059" timestamp="1575519859203" />
-    <state x="555" y="266" width="808" height="536" key="Vcs.Push.Dialog.v2" timestamp="1575351790097">
+    <state width="1878" height="275" key="GridCell.Tab.3.right/0.0.1920.1059@0.0.1920.1059" timestamp="1575943468867" />
+    <state width="256" height="477" key="HiddenNamespacesPopup" timestamp="1575750823659">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state x="555" y="266" width="808" height="536" key="Vcs.Push.Dialog.v2/0.0.1920.1059@0.0.1920.1059" timestamp="1575351790097" />
-    <state x="626" y="356" key="com.intellij.ide.util.TipDialog" timestamp="1575265864579">
+    <state width="256" height="477" key="HiddenNamespacesPopup/0.0.1920.1059@0.0.1920.1059" timestamp="1575750823659" />
+    <state x="554" y="201" width="1022" height="738" key="SettingsEditor" timestamp="1576124838333">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
-    <state x="626" y="356" key="com.intellij.ide.util.TipDialog/0.0.1920.1059@0.0.1920.1059" timestamp="1575265864579" />
+    <state x="554" y="201" width="1022" height="738" key="SettingsEditor/0.0.1920.1059@0.0.1920.1059" timestamp="1576124838333" />
+    <state width="498" height="445" key="SwitcherDM" timestamp="1575749668881">
+      <screen x="0" y="0" width="1920" height="1059" />
+    </state>
+    <state width="498" height="445" key="SwitcherDM/0.0.1920.1059@0.0.1920.1059" timestamp="1575749668881" />
+    <state x="555" y="266" width="808" height="536" key="Vcs.Push.Dialog.v2" timestamp="1575617281151">
+      <screen x="0" y="0" width="1920" height="1059" />
+    </state>
+    <state x="555" y="266" width="808" height="536" key="Vcs.Push.Dialog.v2/0.0.1920.1059@0.0.1920.1059" timestamp="1575617281151" />
+    <state x="721" y="358" width="475" height="344" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1575768804476">
+      <screen x="0" y="0" width="1920" height="1059" />
+    </state>
+    <state x="721" y="358" width="475" height="344" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1920.1059@0.0.1920.1059" timestamp="1575768804476" />
+    <state x="679" y="273" width="560" height="523" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1575779854334">
+      <screen x="0" y="0" width="1920" height="1059" />
+    </state>
+    <state x="679" y="273" width="560" height="523" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1059@0.0.1920.1059" timestamp="1575779854333" />
+    <state x="626" y="356" key="com.intellij.ide.util.TipDialog" timestamp="1576098542039">
+      <screen x="0" y="0" width="1920" height="1059" />
+    </state>
+    <state x="626" y="356" key="com.intellij.ide.util.TipDialog/0.0.1920.1059@0.0.1920.1059" timestamp="1576098542039" />
     <state x="623" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1575593356240">
       <screen x="0" y="0" width="1920" height="1059" />
     </state>
@@ -691,8 +740,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app.js</url>
-          <line>5</line>
-          <option name="timeStamp" value="1" />
+          <line>67</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app.js</url>
+          <line>62</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

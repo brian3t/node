@@ -1,6 +1,7 @@
 {
   "env": {
-    "node": true
+    "node": true,
+    "mongo": true
   },
   "parserOptions": {
     "ecmaVersion": 8 // or 2017

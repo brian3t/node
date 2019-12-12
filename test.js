@@ -1,14 +1,27 @@
-const fetch = require('node-fetch')
-
-function fetchJson(url) {
-    return fetch(url)
-        .then(request => request.text())
-        .then(text => {
-            return JSON.parse(text);
-        })
-        .catch(error => {
-            throw new Error(error);
+var fs = require('fs');
+var existsAsync = async function (path){
+    return new Promise(function (resolve, reject){
+        fs.exists(path, function (exists){
+// exists is a boolean
+            if (exists) {
+// Resolve successfully
+                resolve(exists);
+            } else {
+// Reject with error
+                reject(new Error('path does not exist'));
+            }
         });
+    });
 }
-fetchJson('https://postman-echo.com/timer/object?timestamp=2016-10-10')
-    .then(obj => console.log(obj)).catch(err=>console.log(`Error is: ${err.stack}`));
+// Use as a promise now
+let exists = existsAsync('/var/www/nod2e/test.js').then(function (ex){
+    console.log(`file exists! ${ex}`);
+}).catch((err)=>console.error(`Error: ${err}`))
+/*
+
+existsAsync('/path/to/some/file').then(function() {
+    console.log('file exists!');
+}).catch(function(err) {
+// file does not exist
+    console.error(err);
+});*/
