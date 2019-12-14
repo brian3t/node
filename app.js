@@ -9,20 +9,20 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (){
     // we're connected!
-    console.log(`we're connected!`)
+    // console.log(`we're connected!`)
 });
 var myCol1Schema = new Schema({
-    request: String,
-    time: Number
+    name: String,
+    age: Number,
+    note: String
 }, {
     collection: 'myCol1'
 });
-myCol1Schema.index({request: 'text'});
-var Model = mongoose.model('myCol1', myCol1Schema);
+var myColModel = mongoose.model('myCol1', myCol1Schema);
 
-app.get('/save/:query', cors(), function(req, res){
+app.get('/save/:query', cors(), function (req, res){
     let query = req.params.query;
-    let savedata = new Model({
+    let savedata = new myColModel({
         'request': query,
         'time': Math.floor(Date.now() / 1000) // Time of save the data in unix timestamp format
     }).save(function (err, result){
@@ -32,6 +32,25 @@ app.get('/save/:query', cors(), function(req, res){
         }
     })
 })
+
+let query = myColModel.find({name: 12312});
+let query_res = query.exec()
+query_res.then((docs) => {
+    console.log(docs)
+}).then((err) => {
+    if (err) console.error(err)
+})
+myColModel.findOne({'age': {$gte: 26}}, function (err, doc){
+//returns document doc
+//     console.log(doc)
+});
+let id = '5df5265320fda85c76ce3ac3'
+/*
+myColModel.findById(id,function(err,doc){
+//returns document doc
+    console.log(doc)
+});
+*/
 
 /*
 Model.find({request:/.*thon.*!/},(err, myCols)=>{
@@ -60,7 +79,7 @@ Kitten.find({name: /^.+mon$/},(err, kittens)=>{
 app.get('/find/:query', cors(), function (req, res){
     var query = req.params.query
     let regexp = new RegExp(`.*${query}.*`)
-    Model.find({
+    myColModel.find({
         request: regexp
     }, function (err, result){
         if (err) throw err;
@@ -88,5 +107,7 @@ mongoose.connect('mongodb://localhost:27017/dbName')
 
 */
 
-app.listen(3000, () => console.log(`node running on 3000`))
+app.listen(3000, () => {
+    let a = `node running on 3000`
+})
 
