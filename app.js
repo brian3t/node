@@ -1,113 +1,27 @@
-const express = require('express')
+const express = require('express'), body_parser=require('body-parser')
 var app = new express()
-var cors = require('cors'); // We will use CORS to enable cross origin domain requests.
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
-mongoose.connect('mongodb://localhost/bn', {useNewUrlParser: true, useUnifiedTopology: true});
 
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function (){
-    // we're connected!
-    // console.log(`we're connected!`)
-});
-var myCol1Schema = new Schema({
-    name: String,
-    age: Number,
-    note: String
-}, {
-    collection: 'myCol1'
-});
-var myColModel = mongoose.model('myCol1', myCol1Schema);
+app.use(body_parser.json())
+app.use(body_parser.urlencoded({extended:true}))
 
-app.get('/save/:query', cors(), function (req, res){
-    let query = req.params.query;
-    let savedata = new myColModel({
-        'request': query,
-        'time': Math.floor(Date.now() / 1000) // Time of save the data in unix timestamp format
-    }).save(function (err, result){
-        if (err) throw err;
-        if (result) {
-            res.json(result)
-        }
-    })
+var itemStore=['one','two']
+
+//get all items
+app.get('/item',(req,res)=>{
+    res.json(itemStore)
 })
 
-let query = myColModel.find({name: 12312});
-let query_res = query.exec()
-query_res.then((docs) => {
-    console.log(docs)
-}).then((err) => {
-    if (err) console.error(err)
-})
-myColModel.findOne({'age': {$gte: 26}}, function (err, doc){
-//returns document doc
-//     console.log(doc)
-});
-let id = '5df5265320fda85c76ce3ac3'
-/*
-myColModel.findById(id,function(err,doc){
-//returns document doc
-    console.log(doc)
-});
-*/
-
-/*
-Model.find({request:/.*thon.*!/},(err, myCols)=>{
-    if (err) return console.error(err)
-    console.log(myCols)
-})
-*/
-
-/*const kittySchema = new mongoose.Schema({
-    name: String
-});
-kittySchema.methods.speak = function (){
-    let greeting = this.name ? "Meow name is " + this.name : "I don't have a name";
-    console.log(greeting);
-}
-var Kitten = mongoose.model('Kitten', kittySchema);
-
-let speakingKitten = new Kitten({name: 'doremon'})
-speakingKitten.speak()
-
-Kitten.find({name: /^.+mon$/},(err, kittens)=>{
-    if (err) return console.error(err);
-    console.log(kittens)
-})*/
-
-app.get('/find/:query', cors(), function (req, res){
-    var query = req.params.query
-    let regexp = new RegExp(`.*${query}.*`)
-    myColModel.find({
-        request: regexp
-    }, function (err, result){
-        if (err) throw err;
-        if (result) {
-            res.json(result)
-        } else {
-            res.send(JSON.stringify({
-                error: 'Error'
-            }))
-        }
-    })
-})
-/*
-const Schema = mongoose.Schema
-
-var schemaName = new Schema({
-    request: String,
-    time: Number
-}, {
-    collection: 'bn'
+//get item wieh specified id
+app.get('/item/:id',(req,res)=>{
+    res.json(itemStore[req.params.id])
 })
 
-var Model = mongoose.model('bnModel', schemaName)
-mongoose.connect('mongodb://localhost:27017/dbName')
-
-*/
-
-app.listen(3000, () => {
-    let a = `node running on 3000`
+//post new item
+app.post('/item', (req,res)=>{
+    itemStore.push(req.body.data)
+    res.json(itemStore)
 })
 
+app.listen(3000,()=>{
+    console.log(`server running`)
+})
