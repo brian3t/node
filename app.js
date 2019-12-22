@@ -24,4 +24,5 @@ app.post('/item', (req,res)=>{
 
 app.listen(3000,()=>{
     console.log(`server running`)
+    console.log('\x1b[32mThis red')
 })
