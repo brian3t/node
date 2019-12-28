@@ -1,28 +1,69 @@
-const express = require('express'), body_parser=require('body-parser')
-var app = new express()
+import Sequelize from 'sequelize'
 
-app.use(body_parser.json())
-app.use(body_parser.urlencoded({extended:true}))
+// Option 1: Passing parameters separately
+const sequelize = new Sequelize('fac', 'root', 'rTrapok)1', {
+    host: 'localhost',
+    dialect: 'mysql'/* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */,
+    define: {
+        timestamps: false
+    }
+});
 
-var itemStore=['one','two']
+sequelize
+    .authenticate()
+    .then(() => {
+        console.log('Connection has been established successfully.');
+    })
+    .catch(err => {
+        console.error('Unable to connect to the database:', err);
+    });
 
-//get all items
-app.get('/item',(req,res)=>{
-    res.json(itemStore)
-})
+const User = sequelize.define('user', {
+    // attributes
+    username: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    email: {
+        type: Sequelize.STRING,
+        allowNull: false
+        // allowNull defaults to true
+    },
+    first_name: {
+        type: Sequelize.STRING,
+    },
+    note: {
+        type: Sequelize.STRING
+    }
+}, {
+    freezeTableName: true
+    // options
+});
 
-//get item wieh specified id
-app.get('/item/:id',(req,res)=>{
-    res.json(itemStore[req.params.id])
-})
+// Find all users
+User.findAll().then(users => {
+    console.log("All users:", JSON.stringify(users, null, 4));
+});
 
-//post new item
-app.post('/item', (req,res)=>{
-    itemStore.push(req.body.data)
-    res.json(itemStore)
-})
+// Create a new user
+User.create({username: "test1227", email: "johnDoe@gmail.com", first_name: 'John', last_name: 'Doe'}).then(jane => {
+    console.log("Jane's auto-generated ID:", jane.id);
+}, err => 'silent');
 
-app.listen(3000,()=>{
-    console.log(`server running`)
-    console.log('\x1b[32mThis red')
-})
+// Delete everyone named "Jane"
+/*User.destroy({
+    where: {
+        username: "test1227"
+    }
+}).then(() => {
+    console.log("delete Done");
+});*/
+
+// Change everyone without a last name to "Doe"
+User.update({note: "2 testing note"}, {
+    where: {
+        note: 'testing note',
+    }
+}).then(() => {
+    console.log("note Done");
+});

@@ -21,5 +21,14 @@
       <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
       <jdbc-url>mongodb://localhost:27017</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="local mysql 3306" uuid="f54f3801-ce82-4cc0-987c-12dfd0fbd3f3">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1:3306</jdbc-url>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+      </driver-properties>
+    </data-source>
   </component>
 </project>
