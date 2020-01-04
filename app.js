@@ -1,69 +1,24 @@
-import Sequelize from 'sequelize'
-
-// Option 1: Passing parameters separately
-const sequelize = new Sequelize('fac', 'root', 'rTrapok)1', {
-    host: 'localhost',
-    dialect: 'mysql'/* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */,
-    define: {
-        timestamps: false
-    }
+var express = require('express'),
+    bodyParser = require('body-parser'),
+    oauthserver = require('oauth2-server'); // Would be: 'oauth2-server'
+var app = express();
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.oauth = oauthserver({
+    model: require('./routes/oauth2/model'),
+    grants: ['password', 'refresh_token'],
+    debug: true
 });
-
-sequelize
-    .authenticate()
-    .then(() => {
-        console.log('Connection has been established successfully.');
-    })
-    .catch(err => {
-        console.error('Unable to connect to the database:', err);
-    });
-
-const User = sequelize.define('user', {
-    // attributes
-    username: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    email: {
-        type: Sequelize.STRING,
-        allowNull: false
-        // allowNull defaults to true
-    },
-    first_name: {
-        type: Sequelize.STRING,
-    },
-    note: {
-        type: Sequelize.STRING
-    }
-}, {
-    freezeTableName: true
-    // options
+// Handle token grant requests
+app.all('/oauth/token', app.oauth.grant());
+app.get('/secret', app.oauth.authorise(), function (req, res){
+// Will require a valid access_token
+    res.send('Secret area');
 });
-
-// Find all users
-User.findAll().then(users => {
-    console.log("All users:", JSON.stringify(users, null, 4));
+app.get('/public', function (req, res){
+// Does not require an access_token
+    res.send('Public area');
 });
-
-// Create a new user
-User.create({username: "test1227", email: "johnDoe@gmail.com", first_name: 'John', last_name: 'Doe'}).then(jane => {
-    console.log("Jane's auto-generated ID:", jane.id);
-}, err => 'silent');
-
-// Delete everyone named "Jane"
-/*User.destroy({
-    where: {
-        username: "test1227"
-    }
-}).then(() => {
-    console.log("delete Done");
-});*/
-
-// Change everyone without a last name to "Doe"
-User.update({note: "2 testing note"}, {
-    where: {
-        note: 'testing note',
-    }
-}).then(() => {
-    console.log("note Done");
-});
+// Error handling
+app.use(app.oauth.errorHandler());
+app.listen(3000);
