@@ -27,7 +27,7 @@
     "js-best-practices": "^1.1.4",
     "jstrace": "^0.3.0",
     "learn-generators": "^1.7.2",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "lololodash": "^0.9.0",
     "mongoose": "^5.8.1",
     "multer": "^1.4.2",
